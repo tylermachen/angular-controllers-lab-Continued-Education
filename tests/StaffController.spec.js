@@ -1,4 +1,4 @@
-describe('ContactController', function () {
+describe('StaffController', function () {
 	var $controller;
 
 	beforeEach(module('app'));
@@ -10,16 +10,16 @@ describe('ContactController', function () {
 
 	it('should not be using $scope to set values', function () {
 		var $scope = {};
-		$controller('ContactController as vm', {$scope: $scope});
+		$controller('StaffController as vm', {$scope: $scope});
 
 		expect($scope.name).toBe(undefined);
 		expect($scope.email).toBe(undefined);
 	});
 	it('should have values assigned to `this`', function () {
 		var $scope = {};
-		$controller('ContactController as vm', {$scope: $scope});
+		$controller('StaffController as vm', {$scope: $scope});
 
-		expect($scope.vm.name).toBe('Bill Gates');
-		expect($scope.vm.email).toBe('william@microsoft.com');
+		expect($scope.vm.name).toBe('Steve Jobs');
+		expect($scope.vm.email).toBe('steve@apple.com');
 	})
 });
